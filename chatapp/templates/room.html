@@ -1,0 +1,69 @@
+{% extends 'base.html' %} {% block content %}
+<nav>
+  <h1>BizzME😎</h1>
+  <ul>
+    <li><h3>Room code: {{room}}</h3></li>
+    <li><a href="/" id="leave-chat-btn">Leave the Chat</a></li>
+    <li><a href="/" id="Create-room">Create room</a></li>
+  </ul>
+</nav>
+ 
+<div id="chat-room-widget">
+  <div id="msgs-container">
+    <ul id="messages"></ul>
+  </div>
+  <div id="message-box">
+    <input type="text" placeholder="BiZZ UM Anything..." id="message-input" name="message" />
+    <button type="submit" id="send-btn" onclick="sendMessage()">Send</button>
+  </div>
+</div>
+<script type="text/javascript">
+  var socketio = io();
+  socketio.on("message", function (message) { createChatItem(message.message, message.sender) });
+  function createChatItem(message, sender) {
+    var messages = document.getElementById("messages");
+    if (sender === "") {
+      content = `<p class="member-activity">${message}</p>`;
+    } else {
+      var senderIsUser = "{{user}}" === sender;
+      var content = `
+        <li class="message-item ${senderIsUser ? "self-message-item" : "peer-message-item"}">
+          <li class="message-item ${senderIsUser ? "self-message-item" : "peer-message-item"}" 
+            style="display: flex; justify-content: ${senderIsUser ? "flex-end" : "flex-start"}; margin-bottom: 10px;">
+            <div style="
+                background-color: ${senderIsUser ? "black" : "#ddd"}; 
+                color: ${senderIsUser ? "white" : "black"}; 
+                padding: 10px; 
+                border-radius: 10px; 
+                max-width: 60%; 
+                word-wrap: break-word;
+                text-align: left;">
+                ${!senderIsUser ? `<p style="font-size: 12px; font-weight: bold; color: gray;">${sender}</p>` : ""}
+                <p>${message}</p>
+                <small style="font-size: 10px; color: ${senderIsUser ? "#ddd" : "#666"};">${new Date().toLocaleString()}</small>
+            </div>
+        </li>
+           
+        </li>
+    `;}
+    messages.scrollTop = messages.scrollHeight;
+    messages.innerHTML += content;
+      
+    
+    
+
+  }
+  function sendMessage() {
+    var msgInput = document.getElementById("message-input");
+    if (msgInput.value === "") return;
+    var msg = msgInput.value;
+    socketio.emit("message", { message: msg });
+    msgInput.value = "";
+  }
+</script>
+{% for message in messages %}
+<script type="text/javascript">
+  createChatItem("{{message.message}}", "{{message.sender}}");
+</script>
+{% endfor %}
+{% endblock %}

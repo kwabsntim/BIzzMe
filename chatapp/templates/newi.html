@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<div class="home-container">
+  
+    <form action="" method="post" id="chat-widget-home">
+        <h1> BizzMe🤔 </h1><br>
+        <p>Enter a name to create room</p>
+        <div id="name-input">
+            <input type="text" id="name" name="name" placeholder="Username" value="{{name}}" />
+            <button type="submit" id="create" name="create">Create Room</button>
+        </div><br>
+        <div>
+            <p>Enter room code to join</p>
+            <input type="text" id="code" name="code" placeholder="Enter room code" value="{{code}}" />
+            <button type="submit" id="join" name="join">Join</button>
+        </div>
+       
+        
+    
+         {% if error %}
+            <p id="error" style="color: red;">{{error}}</p>
+        {% endif %}
+    </form>
+    <footer class="footer"></footer>
+        <p>&copy; 2025 BizzMe. All rights reserved.</p>
+    </footer>
+</div>
+{% endblock %}
