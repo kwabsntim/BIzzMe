@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/BizzME.py",
+      "src": "BizzME.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "api/BizzME.py"
+      "dest": "BizzME.py"
     }
   ]
 }
