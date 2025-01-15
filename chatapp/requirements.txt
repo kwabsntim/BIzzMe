@@ -29,6 +29,7 @@ h11==0.14.0
 httplib2==0.20.2
 idna==3.3
 importlib-metadata==4.6.4
+gunicorn
 itsdangerous==2.2.0
 jeepney==0.7.1
 Jinja2==3.1.5
