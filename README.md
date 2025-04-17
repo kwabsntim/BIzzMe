@@ -25,6 +25,6 @@ The above is the chatroom interface of the chat app
 - Tools : VS Code ,Github
 
 ## ⚙️ Installation 
-" bash 
-#clone the repository
+
+# clone the repository
 git clone 
