@@ -16,4 +16,10 @@ The above is the chatroom interface of the chat app
 - create room for you to be asked questions about your life 
 - chat anonymously with the person who created the chatroom
 - leave room feature
-- ability to join a room using a room code 
+- ability to join a room using a room code
+
+##  🛠️ Tech stack
+
+- Frontend : Html / css
+- Backend : Flask,websockets
+- Tools : VS Code ,Github
