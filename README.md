@@ -12,13 +12,13 @@ The above is the login and create chatroom interface of the chatapp
 
 The above is the chatroom interface of the chat app
 
-## 🚀 Features 
+## 🚀 *Features* 
 - create room for you to be asked questions about your life 
 - chat anonymously with the person who created the chatroom
 - leave room feature
 - ability to join a room using a room code
 
-##  🛠️ Tech stack
+##  🛠️ *Tech stack*
 
 - Frontend : Html / css
 - Backend : Flask,websockets
