@@ -23,3 +23,8 @@ The above is the chatroom interface of the chat app
 - Frontend : Html / css
 - Backend : Flask,websockets
 - Tools : VS Code ,Github
+
+## ⚙️ Installation 
+" bash 
+#clone the repository
+git clone 
