@@ -26,8 +26,20 @@ The above is the chatroom interface of the chat app
 
 ## ⚙️ Installation 
 
-- clone the repository
-git clone https://github.com/kwabsntim/BIzzMe.git 
-- or better still download the zip file of the project
-- Navigate into the folder
-  cd Chatapp
+```bash
+# Clone the repository
+git clone https://github.com/your-username/project-name.git
+
+# or donwload the zip file of the project
+
+# Navigate into the folder
+cd chatapp
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+python app.py
+```
+
+---
