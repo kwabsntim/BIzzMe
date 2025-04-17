@@ -28,7 +28,7 @@ The above is the chatroom interface of the chat app
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/project-name.git
+git clone https://github.com/kwabsntim/BizzME.git
 
 # or donwload the zip file of the project
 
