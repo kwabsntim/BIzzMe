@@ -22,7 +22,7 @@ The above is the chatroom interface of the chat app
 
 - Frontend : Html / css
 - Backend : Flask,websockets
-- Tools : VS Code ,Github
+- Tools : VS Code,Github
 
 ## ⚙️ Installation 
 
@@ -39,7 +39,28 @@ cd chatapp
 pip install -r requirements.txt
 
 # Run the app
-python app.py
+export FLASK_APP=BizzME
+flask--debug run 
 ```
 
 ---
+## 🧪 Usage
+You should see the main login page when the BizzME.py file runs 
+
+## 📁 Folder Structure
+
+```bash
+chatapp/
+├── static/
+├── templates/
+├── BizzME.py
+└── requirements.txt
+```
+## ✨ Future Plans
+- Improvement of UI
+- Mobile support
+
+## 👨🏽‍💻 Author
+
+- [Your Name](https://github.com/kwabsntim) 
+- Made in Ghana 🇬🇭
