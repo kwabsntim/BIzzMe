@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 # Run the app
 export FLASK_APP=BizzME
-flask--debug run 
+flask --debug run 
 ```
 
 ---
