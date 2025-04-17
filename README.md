@@ -64,3 +64,4 @@ chatapp/
 
 - [kwabsntim](https://github.com/kwabsntim) 
 - Made in Ghana 🇬🇭
+  *Through learning we progress (Per scientiam progredimur)*
