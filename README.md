@@ -62,5 +62,5 @@ chatapp/
 
 ## 👨🏽‍💻 Author
 
-- [Your Name](https://github.com/kwabsntim) 
+- [kwabsntim](https://github.com/kwabsntim) 
 - Made in Ghana 🇬🇭
